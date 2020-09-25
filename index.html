@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Project 2</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/jquery.listtopie.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="carousel" class="carousel slide carousel--fade shadow" data-ride="carousel">
+    <div class="carousel-inner">
+
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+      </ol>
+
+      <div class="carousel-item active">
+        <!-- add bg image here-->
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h2 class="display-4 font-weight-bold">Title Slide</h2>
+            <p class="lead font-weight-bold">Anna Allen</p>
+            <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <h2 class="slidetitle">Quick Facts</h2>
+          <p class="slidecaption">Three of eight Bear Species in the world live in North America. This includes the brown, black, and polar bear as well as their subspecies. </p> 
+          <p style="font-style: italic; text-align: center;">Click on each button to reveal information about each of the bears.</p>
+          <div class="bearicons">
+            <img id="brownicon" src="img/brownbeartransparent2.webp" alt="">
+            <img id="polaricon" src="img/polarbeartransparent.png" alt="">
+            <img id="blackicon" src="img/blktransparent.png" alt="">
+          </div>
+          <div class="bearicons">
+            <button id="myBtn">Brown Bear</button>
+            <button id="myBtn">Polar Bear</button>
+            <button id="myBtn">Black Bear</button>
+          </div>
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+            <h2 class="slidetitle">Where do bears live?</h2>
+            <p class="slidecaption">Bears live in all regions and landscapes of North America, from the Appalachian Mountains in the East to the Rockies in the West.</p>
+            <div class="row">
+              <img id="map" src="img/beardist.gif" alt="">
+              <div id="static">
+                <div data-lcolor="#ffb6b9">30<span>Brown</span></div>
+                <div data-lcolor="#fae3d9">60<span>Black</span></div>
+                <div data-lcolor="#bbded6">10<span>Polar</span></div>
+              </div>
+              <p id="slide3text">This map, created from three seperate maps for each species found in North America, shows the current
+                distribution of bears across the continent. Historically, bear populations have been shrinking,
+                including
+                the endangered Polar Bear and the Grizzly Bear. However, Black and Brown Bears as a whole have made a
+                comeback within recent decades.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+            <h2 class="slidetitle">Be Bear-y Aware</h2>
+            <p class="">Black and Brown bears aren't endangered, come to humans for food</p>
+            <p>Bear management is one of the most important aspects of saving the bear populations in North America.
+              National groups, such as the National Park Service or the US Fish and Wildlife Service, emphasize how
+              important it is to be educated about the furry creatures. Education about bear conservation and prevention
+              of human-bear interaction is essential to future bear survival in North America.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <div class="carousel-caption">
+            <h2 class="">Quiz</h2>
+            <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div id="quiz">
+            <div id="quiz-header">
+              <h1>jQuery Quiz Plugin</h1>
+              <p class="faded">A quiz about the plugin built by the plugin.</p>
+            </div>
+            <div id="quiz-start-screen">
+              <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h2 class="display-4 font-weight-bold">SOURCES</h2>
+            <p class="lead font-weight-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js" integrity="sha512-gRg3MTbqGUwZiqkDRUj7BJOqiYX6tQDAkZVq6zCHfRUxBhoW0kRG4ASllaK31PIe+I+xdaJhLcZXbs2O2r8SRg==" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.listtopie.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+<!-- SOURCES
+https://www.nps.gov/subjects/bears/index.htm
+https://www.recreation.gov/articles/list/bear-facts-and-safety-tips/840
+https://www.fs.usda.gov/visit/know-before-you-go/bears
+
+-->
