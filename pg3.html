@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Project 2</title>
+    <link rel="stylesheet" href="css/jquery.quiz-min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div id="quiz">
+        <div id="quiz-header">
+          <h1>Quiz Example</h1>
+          <p><a id="quiz-home-btn">Quiz Home</a></p>
+        </div>
+        <div id="quiz-start-screen">
+          <p>
+            <a href="#" id="quiz-start-btn" class="quiz-button">Start Quiz</a>
+          </p>
+        </div>
+      </div>
+      
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/jquery.quiz-min.js"></script>
+ <script src="js/main.js"></script>
+
+ <script>
+     const myQuiz = [
+  {
+    'q': 'A s<a href="https://www.jqueryscript.net/tags.php?/map/">map</a>le question?',
+    'options': [
+      'Answer 1',
+      'Answer 2',
+      'Answer 3',
+      'Answer 4'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+  },
+  {
+    'q': 'A smaple question?',
+    'options': [
+      'Answer 1',
+      'Answer 2'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+  },
+  {
+    'q': 'A smaple question?',
+    'options': [
+      'Answer 1',
+      'Answer 2',
+      'Answer 3',
+      'Answer 4'
+    ],
+    'correctIndex': 2,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+  },
+  {
+    'q': 'A smaple question?',
+    'options': [
+      'Answer 1',
+      'Answer 2'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+  },
+  {
+    'q': 'A smaple question?',
+    'options': [
+      'Answer 1',
+      'Answer 2',
+      'Answer 3',
+      'Answer 4'
+    ],
+    'correctIndex': 3,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+  }
+]
+
+ </script>
+
+ <script>$('#quiz').quiz({
+    questions: myQuiz
+  });
+  </script>
+
+  <script>
+      $('#quiz').quiz({
+
+// allows incorrect options
+allowIncorrect: true,
+
+// counter settings
+counter: true,
+counterFormat: '%current/%total',
+
+// default selectors & format
+startScreen: '#quiz-start-screen',
+startButton: '#quiz-start-btn',
+homeButton: '#quiz-home-btn',
+resultsScreen: '#quiz-results-screen',
+resultsFormat: 'You got %score out of %total correct!',
+gameOverScreen: '#quiz-gameover-screen',
+
+// button text
+nextButtonText: 'Next',
+finishButtonText: 'Finish',
+restartButtonText: 'Restart'
+
+});
+
+  </script>
+
+</body>
+</html>

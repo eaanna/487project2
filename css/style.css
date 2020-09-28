@@ -1,7 +1,19 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
 
 .carousel-item {
   background-color: #e3dcc0;
-  height: 580px;
+  height: 725px;
 }
 
 .carousel-item:hover {
@@ -58,16 +70,34 @@
   color: #000;
 }
 
+.titlepage {
+  background-color: #9baf93;
+  opacity: 0.75;
+  border-radius: 5px;
+  color: white;
+  height: 30%;
+  margin-top: 15%;
+}
 .slidetitle {
   font-size: 30pt;
   text-align: center;
   font-weight: 600;
   margin-top: 2%;
+  background-color: #9baf93;
+  opacity: 0.85;
+  border-radius: 5px;
+  color: black;
+  padding: 6px;
 }
 
 .slidecaption {
   font-size: 12pt;
   text-align: center;
+}
+
+.caption {
+  font-size: 10pt;
+  font-style: italic;
 }
 
 .bearicons{
@@ -90,18 +120,104 @@
   height: auto;
 }
 
-.row {
-  display: inline;
+.slide3contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.piecontent {
+  display: block;
+  width: 50%;
+}
+#pielegend {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+}
+#piekey {
+  list-style-type: none;
+  font-size: 18pt;
+  font-weight: bolder;
+  line-height: 4rem;
+  background-color: #fffef2;
+  border-radius: 5px;
+  padding-right: 40px;
 }
 #map{
-  width: 35%;
+  width: 40%;
   height: auto;
 }
 
 #slide3text {
   text-align: left;
 }
+.beartrash {
+  display: flex;
+  justify-content: space-evenly;
+  vertical-align: middle;
+}
+#beartrashimg{
+  width: 400px;
+  height: 250px;
+  margin-top: 2%;
+}
+#arrow {
+  width: 100px;
+  height: 100px;
+  margin-top: 8%;
+}
+#beartrashcanimg {
+  width: 300px;
+  height: 250px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#slide5contents {
+  display: flex;
+  justify-content: space-between;
+}
+#standbearimg {
+  margin-top: 7%;
+  width: 90%;
+  height: auto;
+}
+#endangercontent {
+  display: block;
+}
+#iucn {
+  width: 750px;
+  height: auto;
+}
+#iucnlogo {
+  width: 50px;
+  height: auto;
+}
+#bearattackcontent {
+  display: flex;
+  justify-content: space-around;
+}
+#blufftext {
+  width: 50%;
+}
+#bearonroadimg {
+  padding-top: 10%;
+}
 
+.portfoliobtn {
+  background-color: #9baf93;
+  border-color: #9baf93;
+  position: absolute;
+  bottom: 30%;
+}
+.portfoliobtn:hover {
+  background-color: #9baf93;
+  border-color: #9baf93;
+}
+.sources {
+  list-style-type: none;
+  line-height: 2rem;
+  text-align: center;
+}
 
  /* The Modal (background) */
  .modal {
@@ -141,92 +257,3 @@
   cursor: pointer;
 } 
 
-
-
-/*  QUIZ */
-.faded {
-  color: #777;
-}
-#quiz-counter {
-  color: #88449a;
-}
-.quiz-container {
-    padding: 0.25em;
-    max-width: 650px;
-    margin: 1em auto;
-}
-
-.quiz-container a {
-    text-decoration: none;
-    color: #333;
-}
-
-#quiz-header,
-#quiz-start-screen,
-#quiz-results-screen,
-#quiz-counter {
-    text-align: center;
-}
-
-.question {
-    font-size: 1.25em;
-}
-
-.answers {
-    list-style: none;
-    padding: 0;
-}
-
-.answers a {
-    display: block;
-    padding: 0.5em 1em;
-    margin-bottom: 0.5em;
-    background: #fff;
-}
-
-.answers a.correct {
-    background: #090;
-}
-.answers a.incorrect {
-    background: #c00;
-}
-
-.answers a.correct,
-.answers a.incorrect {
-    color: #fff;
-}
-
-#quiz-controls {
-    background: #63c5bc;
-    color: #111;
-    padding: 0.25em 0.5em 0.5em;
-    text-align: center;
-}
-
-#quiz-response {}
-#quiz-results {
-    font-size: 1.25em;
-}
-
-#quiz-buttons a,
-.quiz-container .quiz-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background: #88449a;
-    color: #fff;
-}
-#quiz-buttons a {
-    background: #fff;
-    color: #333;
-}
-
-/* Quiz State Overrides */
-
-.quiz-results-state #quiz-controls {
-    background: none;
-    padding: 0;
-}
-.quiz-results-state #quiz-buttons a {
-    background: #88449a;
-    color: #fff;
-}

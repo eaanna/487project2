@@ -6,15 +6,17 @@
   <meta charset="utf-8">
 
   <title>Project 2</title>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/jquery.listtopie.css">
+  <link rel="stylesheet" href="css/jquery.quiz-min.css">
+  <link rel="stylesheet" href="css/zebra_tooltips.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <div id="carousel" class="carousel slide carousel--fade shadow" data-ride="carousel">
+  <div id="carousel" class="carousel slide carousel--fade shadow" data-interval="false">
     <div class="carousel-inner">
 
       <ol class="carousel-indicators">
@@ -30,10 +32,9 @@
       <div class="carousel-item active">
         <!-- add bg image here-->
         <div class="container">
-          <div class="carousel-caption text-left">
-            <h2 class="display-4 font-weight-bold">Title Slide</h2>
+          <div class="carousel-caption text-center titlepage">
+            <h2 class="display-4 font-weight-bold">The Bear Necessities: Bears of North America</h2>
             <p class="lead font-weight-bold">Anna Allen</p>
-            <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>
           </div>
         </div>
       </div>
@@ -42,17 +43,25 @@
         <!-- add bg image here-->
         <div class="container">
           <h2 class="slidetitle">Quick Facts</h2>
-          <p class="slidecaption">Three of eight Bear Species in the world live in North America. This includes the brown, black, and polar bear as well as their subspecies. </p> 
-          <p style="font-style: italic; text-align: center;">Click on each button to reveal information about each of the bears.</p>
+          <p class="slidecaption">Three of eight Bear Species in the world live in North America. This includes the
+            brown, black, and polar bear as well as their subspecies. </p>
+          <p style="font-style: italic; text-align: center;">Hpver each name to reveal information about each of
+            the bears.</p>
           <div class="bearicons">
             <img id="brownicon" src="img/brownbeartransparent2.webp" alt="">
             <img id="polaricon" src="img/polarbeartransparent.png" alt="">
             <img id="blackicon" src="img/blktransparent.png" alt="">
           </div>
           <div class="bearicons">
-            <button id="myBtn">Brown Bear</button>
-            <button id="myBtn">Polar Bear</button>
-            <button id="myBtn">Black Bear</button>
+            <p><a href="#" class="zebra_tips2"
+                title="Brown bears are slightly smaller than polar bears, but can top weights at a half ton. Brown bears have long, deep claws made for hunting. Brown bears are often confused with Grizzly Bears- Grizzlies are a subspecies of Brown Bears. The variety in the species makes Brown Bears able to adapt to a variety of environments.">Brown
+                Bear</a></p>
+            <p><a href="#" class="zebra_tips2"
+                title="Polar bears, unlike Brown and Black Bears, eat a majority meat diet. This is due to limited vegetation in the Arctic, and Polar bears can smell prey up to 20 miles away. Polar bears also live longer than Black and Brown Bears, at an average of 25-30 years as opposed to 15-25 years in other bear species.">Polar
+                Bear</a></p>
+            <p><a href="#" class="zebra_tips2"
+                title="The smallest and most abundant of the bears, the American Black Bear is on average half the size of Brown and Polar Bears. Black bears are omnivores, but tend to eat mostly plants in areas that have resources, such as the Great Smoky Mountains. Black bears also climb trees and can make dens inside of the base of a tree, unlike the other two species.">Black
+                Bear</a></p>
           </div>
           <div id="myModal" class="modal">
 
@@ -69,51 +78,149 @@
       <div class="carousel-item">
         <!-- add bg image here-->
         <div class="container">
-            <h2 class="slidetitle">Where do bears live?</h2>
-            <p class="slidecaption">Bears live in all regions and landscapes of North America, from the Appalachian Mountains in the East to the Rockies in the West.</p>
-            <div class="row">
-              <img id="map" src="img/beardist.gif" alt="">
-              <div id="static">
-                <div data-lcolor="#ffb6b9">30<span>Brown</span></div>
-                <div data-lcolor="#fae3d9">60<span>Black</span></div>
-                <div data-lcolor="#bbded6">10<span>Polar</span></div>
-              </div>
-              <p id="slide3text">This map, created from three seperate maps for each species found in North America, shows the current
+          <h2 class="slidetitle">Where do the bears live?</h2>
+          <div class="slide3contents">
+            <img id="map" src="img/beardist.gif" alt="map of bear distribution in north america">
+            <div class="piecontent">
+              <p id="slide3text">This map, created from three seperate maps for each species found in North America,
+                shows the current
                 distribution of bears across the continent. Historically, bear populations have been shrinking,
                 including
                 the endangered Polar Bear and the Grizzly Bear. However, Black and Brown Bears as a whole have made a
                 comeback within recent decades.</p>
+              <div id="pielegend">
+                <div id="pie"></div>
+                <ul id="piekey">
+                  <li style="color: #5e7703;">Polar</li>
+                  <li style="color: #c1cc89;">Brown</li>
+                  <li style="color: #9baf93;">Black</li>
+                </ul>
+              </div>
+              <p style="font-style: italic; text-align: center; font-size: 10pt;">Click on the pie chart to toggle
+                through each value.</p>
+              <p>Out of the near million bears that inhabit North America, the vast majority are Black Bears. While both
+                Black and Brown Bears have made a comeback in populations and have no vulnerability concerns, Brown
+                Bears stagger behind as a whole. Only over 1 percent of bears in North America are Polar Bears. However,
+                it is noted by biologists around the world that populations of endangered species, such as Polar Bears,
+                are difficult to measure.</p>
             </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <!-- add bg image here-->
-        <div class="container">
-            <h2 class="slidetitle">Be Bear-y Aware</h2>
-            <p class="">Black and Brown bears aren't endangered, come to humans for food</p>
-            <p>Bear management is one of the most important aspects of saving the bear populations in North America.
-              National groups, such as the National Park Service or the US Fish and Wildlife Service, emphasize how
-              important it is to be educated about the furry creatures. Education about bear conservation and prevention
-              of human-bear interaction is essential to future bear survival in North America.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <!-- add bg image here-->
-        <div class="container">
-          <div class="carousel-caption">
-            <h2 class="">Quiz</h2>
-            <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
           </div>
+
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <h2 class="slidetitle">Be Bear-y Aware</h2>
+          <p>Bear management is one of the most important aspects of saving the bear populations in North America.
+            American national groups, such as the National Park Service or the US Fish and Wildlife Service, emphasize
+            how important it is to be educated about the furry creatures. Education about bear conservation and
+            prevention
+            of human-bear interaction is essential to future bear survival in North America.</p>
+          <div class="beartrash">
+            <img id="beartrashimg" src="img/beartrash.jpg" alt="">
+            <img id="arrow" src="img/arrow.png" alt="">
+            <img id="beartrashcanimg" src="img/beartrashcan.jpg" alt="">
+          </div>
+          <p style="font-style: italic; text-align: center; font-size: 10pt;">In a response to bears digging through
+            trash, parks have implemented "bear proof" trashcans to stop bears from becoming comfortable with and
+            associating humans with food.</p>
+          <p>Aside from education, wildlife groups use various methods to stop bears from interacting with humans. One
+            major method is negative reinforcement during bear encounters. Black and Brown Bears are omnivores, and are
+            not picky, choosing to eat anything that smells good and gives them energy. As a result, when habitats
+            shrink or a bear wanders too far, human trash is appealing. In an encounter with a bear in backyards, it is
+            good practice to make loud noise and scare the bear off. Scaring the bear increases the changes of the bear
+            seeing humans negatively and not returning.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <h2 class="slidetitle">How does North America stand?</h2>
+          <div id="slide5contents">
+            <div>
+              <img id="standbearimg" src="img/blkbearstand.jpg" alt="">
+            </div>
+            <div id="endangercontent">
+              <p>Compared to other continents, bears are widely known about and protected by governments in North
+                America.
+                Black and Brown Bears are on the rise, and have seen the greatest efforts in North America.
+                Organizations
+                such as the World Wildlife Fund, Free the Bears, and the International Bear Association work to conserve
+                bear populations globally. Some of the efforts include education and rescue from Asian bile farms and
+                circuses where many bears are exploited.</p>
+              <img id="iucn" src="img/redlist.png" alt="">
+              <img id="iucnlogo" src="img/iucnlogo.png" alt="">
+              <p style="text-align: center;" class="caption">Left to right: collapsed, critical, endangered, vulnerable,
+                not
+                threated, least concern, data deficient, and not evalutated.</p>
+              <p>The International Union for the Conservation of Nature periodically releases a 'red list' that has the
+                endangerment levels of plant and animal species across the world. Out of eight bear species, only two
+                are of
+                least concern, the Black and Brown bear. However, although these bears are of least concern, they may be
+                endangered or extinct in some local areas, or may have extinct subspecies. The other six species are
+                considered vulnerable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
+          <h2 class="slidetitle">What if I encounter a bear?</h2>
+          <p>According to an article from Vox Media, only 71 people have been killed in bear attacks in wilderness areas
+            in the United States, compared to a total of 158 in North America since 1900. For the millions of people who
+            explore nature in North America have a minimal chance of encountering a bear attack, much less a fatal one.
+            In general, bears will either charge as a bluff or in aggression. A bluff is typically indicated by the bear
+            with its head up and body puffed to
+            appear bigger. The bear may charge by running fast in big leaps then veer in a different direction as it
+            approaches. In an attack, however, the bear will yawn, clack their teeth, stomp their paws on the ground and
+            huff, and their head and ears will be down.</p>
+          <p class="slidecaption">In the event that you see a bear around, here are some tips to keep you safe. (Black
+            and Brown Bears)</p>
+          <div id="bearattackcontent">
+            <div id="blufftext">
+              <h4 style="text-align: center;">During a Bluff:</h2>
+                <p>During a Bluff: slowly back away, raise your arms, and speak to show the bear you are a human. Do
+                  not run or continue moving if the bear begins to charge. Move away as soon as the bear stops moving.
+                </p>
+                <h4 style="text-align: center;">In an Attack:</h2>
+                  <p>Brown Bears: PLAY DEAD. Proper form includes laying on the stomach, legs spread, and hands covering
+                    the neck and head with the arms. Keep equipment on to keep from more damage. Stay still until the
+                    bear leaves and for several minutes after to ensure the bear leaves the area. If the bear persists
+                    (a
+                    last resort): fight back with any means possible.</p>
+                  <p>Black Bears: FIGHT. Aim for the face, such as the nose and eyes. Use any resource as a weapon, such
+                    as
+                    rocks.</p>
+            </div>
+            <div>
+              <img id="bearonroadimg" src="img/bearinteraction.jpg" alt="">
+            </div>
+          </div>
+          <p style="font-style: italic; text-align: center; font-size: 10pt;">*Note: Polar Bear interactions are
+            extremely rare and limited, and they are known carnivores. Those who live in the Arctic Circle and
+            surrounding areas are likely to take preventative measures to avoid Polar Bears completely.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <!-- add bg image here-->
+        <div class="container">
           <div id="quiz">
             <div id="quiz-header">
-              <h1>jQuery Quiz Plugin</h1>
-              <p class="faded">A quiz about the plugin built by the plugin.</p>
+              <h1 class="slidetitle">Quiz</h1>
+              <p><a id="quiz-home-btn">Here's a short quiz to test what you learned about bears in North America.</a>
+              </p>
             </div>
             <div id="quiz-start-screen">
-              <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
+              <p>
+                <a href="#" id="quiz-start-btn" class="quiz-button">Start Quiz</a>
+              </p>
             </div>
           </div>
         </div>
@@ -122,11 +229,24 @@
       <div class="carousel-item">
         <!-- add bg image here-->
         <div class="container">
-          <div class="carousel-caption text-right">
-            <h2 class="display-4 font-weight-bold">SOURCES</h2>
-            <p class="lead font-weight-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          <div>
+            <h2 class="slidetitle">Sources</h2>
+            <p class="slidecaption">All images have creative commons free use licensing.
             </p>
-            <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>
+            <ul class="sources">
+              <li>
+                National Park Service
+              </li>
+              <li>US Department of Recreation</li>
+              <li>US Department of Agriculture</li>
+              <li>Free the Bears</li>
+              <li>International Union for Conservation of Nature</li>
+              <li>World Wildlife Fund</li>
+              <li>Vox Media</li>
+              <li>Wikimedia Commons</li>
+            </ul>
+            <p><a class="btn btn-sm btn-primary rounded-pill shadow portfoliobtn" href="http://annaallendesign.com" role="button">Link to main Portfolio</a>
+            </p>
           </div>
         </div>
       </div>
@@ -146,18 +266,169 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js" integrity="sha512-gRg3MTbqGUwZiqkDRUj7BJOqiYX6tQDAkZVq6zCHfRUxBhoW0kRG4ASllaK31PIe+I+xdaJhLcZXbs2O2r8SRg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"
+    integrity="sha512-gRg3MTbqGUwZiqkDRUj7BJOqiYX6tQDAkZVq6zCHfRUxBhoW0kRG4ASllaK31PIe+I+xdaJhLcZXbs2O2r8SRg=="
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="js/jquery.listtopie.js"></script>
+  <script src="js/jquery.rotapie.js"></script>
+  <script src="js/zebra_tooltips.min.js"></script>
+  <script src="js/jquery.quiz-min.js"></script>
   <script src="js/main.js"></script>
+
+  <script>$(document).ready(function () {
+      new $.Zebra_Tooltips($('.zebra_tips1'));
+      new $.Zebra_Tooltips($('.zebra_tips2'));
+      new $.Zebra_Tooltips($('.zebra_tips3'));
+    });</script>
+
+  <script>
+    const myQuiz = [
+      {
+        'q': '1: How many species of bears live in North America?',
+        'options': [
+          '3',
+          '8',
+          '4'
+        ],
+        'correctIndex': 0,
+        'correctResponse': 'Correct!',
+        'incorrectResponse': 'Incorrect. Only Black, Brown, and Polar Bears live in North America.'
+      },
+      {
+        'q': '2: What species is the Grizzly Bear a part of?',
+        'options': [
+          'Black',
+          'Brown',
+          'Polar',
+          'Panda'
+        ],
+        'correctIndex': 1,
+        'correctResponse': 'Correct!',
+        'incorrectResponse': 'Incorrect. Grizzly Bears are a subspecies of the Brown Bear.'
+      },
+      {
+        'q': '3: What species of bears are "Least Concern" according to the IUCN?',
+        'options': [
+          'Black and Brown',
+          'Polar',
+          'Grizzly',
+          'Only Black'
+        ],
+        'correctIndex': 0,
+        'correctResponse': 'Correct!',
+        'incorrectResponse': 'Incorrect. Out of 8 Species, only Black and Brown are considered "Least Concern."'
+      },
+      {
+        'q': '4: If a Brown Bear attacks, what should you do?',
+        'options': [
+          'Nothing',
+          'Run',
+          'Fight',
+          'Play dead, and fight as a last resort'
+        ],
+        'correctIndex': 3,
+        'correctResponse': 'Correct!',
+        'incorrectResponse': 'Incorrect. Playing dead is the best method in a Brown Bear attack.'
+      },
+      {
+        'q': '5: What diet do Brown and Black Bears have?',
+        'options': [
+          'Herbivore',
+          'Carnivore',
+          'Omnivore',
+          'Unknown'
+        ],
+        'correctIndex': 2,
+        'correctResponse': 'Correct!',
+        'incorrectResponse': 'Incorrect. Brown and Black Bears are omnivores.'
+      }
+    ]
+
+  </script>
+
+  <script>
+    $('#quiz').quiz({
+
+      questions: myQuiz,
+
+      // allows incorrect options
+      allowIncorrect: true,
+
+      // counter settings
+      counter: true,
+      counterFormat: '%current/%total',
+
+      // default selectors & format
+      startScreen: '#quiz-start-screen',
+      startButton: '#quiz-start-btn',
+      homeButton: '#quiz-home-btn',
+      resultsScreen: '#quiz-results-screen',
+      resultsFormat: 'You got %score out of %total correct!',
+      gameOverScreen: '#quiz-gameover-screen',
+
+      // button text
+      nextButtonText: 'Next',
+      finishButtonText: 'Finish',
+      restartButtonText: 'Restart'
+
+    });
+
+  </script>
+
+
+
+
+
+  <script>
+    $(function () {
+      var pie = $('#pie').rotapie();
+    });
+  </script>
+  <script>
+    $(function () {
+      var pie = $('#pie').rotapie({
+        slices: [                                // An array of slice objects.
+          { color: '#5e7703', percentage: 1 },  // Each slice object requires a color and percentage.
+          { color: '#c1cc89', percentage: 6 }, // The font color defaults to the color but can be overriden by specifying fontColor.
+          { color: '#9baf93', percentage: 93 }
+        ],
+        sliceIndex: 0, // Start index selected slice.
+        deltaAngle: 0.2, // The rotation angle in radians between frames, smaller number equals slower animation.
+        minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '45%'.
+        maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '50%'.
+        minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'.
+        maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'.
+        innerColor: '#fff', // Backgroundcolor inner circle.
+        minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'.
+        maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'.
+        fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'.
+        fontFamily: 'Times New Roman', // Font-family percentage display.
+        fontWeight: 'bold', // Font-weight percentage display.
+        decimalPoint: '.', // Can be set to comma or other symbol.
+        clickable: true, // If set to true a user can select a different slice by clicking on it.
+        beforeAnimate: undefined, // Callback function called before starting animation. Read the documentation for more information.
+        afterAnimate: undefined // Callback function called after animation. Read the documentation for more information.
+      });
+    });
+  </script>
+
+  <script>
+    $(function () {
+      var pie = $('#pie').rotapie(....);
+      pie.animate(index, pieIndex); // Animate the pie chart to the next slice index.
+      pie.repaint(pieIndex); // Redraw the pie chart, is often used after changing settings via "getSettings".
+      pie.getSettings(pieIndex); // Retrieve the settings object.
+    });
+  </script>
+
+
 
 </body>
 
@@ -167,5 +438,15 @@
 https://www.nps.gov/subjects/bears/index.htm
 https://www.recreation.gov/articles/list/bear-facts-and-safety-tips/840
 https://www.fs.usda.gov/visit/know-before-you-go/bears
+https://freethebears.org/pages/objectives-achievements
+https://www.bearbiology.org/bears-of-the-world/
+https://www.iucnredlist.org/
+https://www.worldwildlife.org/species/brown-bear
+https://www.vox.com/2016/10/6/13170344/bear-attacks-national-state-parks
+https://www.iucn.org/sites/dev/files/import/downloads/american_black_bear.pdf
+https://en.wikipedia.org/wiki/American_black_bear#Distribution_and_population
+https://en.wikipedia.org/wiki/Brown_bear#Distribution_and_habitat
+https://www.nps.gov/articles/bearattacks.htm
+
 
 -->
